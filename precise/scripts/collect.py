@@ -66,7 +66,8 @@ class CollectScript(BaseScript):
     EXIT_KEY_CODE = 27
 
     usage = Usage(__doc__)
-    usage.add_argument('file_label', nargs='?', help='File label (Ex. recording-##)')
+    usage.add_argument('file_label', nargs='?',
+                       help='File label (Ex. recording-##)')
 
     def __init__(self, args):
         super().__init__(args)
@@ -121,8 +122,10 @@ class CollectScript(BaseScript):
     def _run(self):
         args = self.args
         self.show_input()
-        args.file_label = args.file_label or input("File label (Ex. recording-##): ")
-        args.file_label = args.file_label + ('' if '#' in args.file_label else '-##')
+        args.file_label = args.file_label or input(
+            "File label (Ex. recording-##): ")
+        args.file_label = args.file_label + \
+            ('' if '#' in args.file_label else '-##')
         self.hide_input()
 
         while True:
