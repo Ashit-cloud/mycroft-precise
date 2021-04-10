@@ -79,7 +79,8 @@ class EvalScript(BaseScript):
 
     def run(self):
         args = self.args
-        data = TrainData.from_both(args.tags_file, args.tags_folder, args.folder)
+        data = TrainData.from_both(
+            args.tags_file, args.tags_folder, args.folder)
         data_files = data.train_files if args.use_train else data.test_files
         print('Data:', data)
 
@@ -102,7 +103,8 @@ class EvalScript(BaseScript):
 
             train, test = data.load(args.use_train, not args.use_train)
             inputs, targets = train if args.use_train else test
-            predictions = Listener.find_runner(model_name)(model_name).predict(inputs)
+            predictions = Listener.find_runner(
+                model_name)(model_name).predict(inputs)
 
             stats = Stats(predictions, targets, sum(data_files, []))
 
