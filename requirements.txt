@@ -30,13 +30,13 @@ python-dateutil==2.8.0
 PyYAML==5.1
 scikit-learn==0.20.3
 scikit-optimize==0.5.2
-scipy==1.2.1
+scipy==1.4.1
 six==1.12.0
 sonopy==0.1.2
 speechpy-fast==2.4
-tensorboard==1.13.1
-tensorflow==1.13.1
-tensorflow-estimator==1.13.0
+tensorboard==2.1.1
+tensorflow==2.1.0
+tensorflow-estimator==2.1.0
 termcolor==1.1.0
 tqdm==4.31.1
 typing==3.6.6
