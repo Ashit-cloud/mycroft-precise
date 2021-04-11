@@ -63,7 +63,7 @@ def save_audio(name, data, args):
 
 class CollectScript(BaseScript):
     RECORD_KEY = ' '
-    EXIT_KEY_CODE = 27
+    EXIT_KEY_CODE = 27precise-test hey-computer.net audio/
 
     usage = Usage(__doc__)
     usage.add_argument('file_label', nargs='?',
